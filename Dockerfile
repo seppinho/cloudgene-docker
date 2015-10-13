@@ -13,5 +13,4 @@ WORKDIR /opt
 RUN wget http://cloudgene.uibk.ac.at/downloads/cloudgene-docker/cloudgene-1.11.0-assembly.tar.gz -O cloudgene.tar.gz
 RUN mkdir cloudgene
 RUN tar xvfz cloudgene.tar.gz -C cloudgene
-
-# Cloudgene Port
+RUN sudo chmod +x /opt/cloudgene/cloudgene
