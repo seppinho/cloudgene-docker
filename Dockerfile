@@ -1,6 +1,6 @@
 FROM seppinho/cdh5-hadoop-mrv1
 
-MAINTAINER Sebastian Schoenherr <sebastian.schoenherr@i-med.ac.at>
+MAINTAINER Cloudgene-Team: Sebastian Schoenherr <sebastian.schoenherr@i-med.ac.at> and Lukas Forer <lukas.forer@i-med.ac.at>
 
 #Root Dir
 WORKDIR /
