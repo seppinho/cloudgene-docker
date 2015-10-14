@@ -5,10 +5,10 @@ This repository installs Hadoop and Cloudgene in a Docker Image. Choose an app a
 
 ## Available apps
 
-- WordCount 
+- WordCount: The "Hello World" of Hadoop 
     
     	sudo docker run --privileged -it -p 8082:8082 seppinho/cloudgene-docker run-wordcount.sh
--
- mtDNA-Server
+
+- mtDNA-Server: A contamination and heteroplasmy pipeline, available also as a [service](http://mtdna-server.uibk.ac.at)
 		
 		sudo docker run --privileged -it -p 8082:8082 seppinho/cloudgene-docker run-mtDNA-Server.sh
