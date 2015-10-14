@@ -11,6 +11,8 @@ RUN sudo apt-get install jsvc git -y
 
 # copy scripts for executing apps
 ADD apps /usr/bin/
+# copy script for start Hadoop
+ADD conf /usr/bin/
 RUN sudo chmod +x /usr/bin/*
 
 # Get Cloudgene [currently as a JAR]
