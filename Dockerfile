@@ -11,7 +11,6 @@ RUN sudo apt-get update -y
 RUN sudo apt-get install jsvc git r-base -y --force-yes
 
 # copy scripts
-ADD apps /usr/bin/
 ADD conf /usr/bin/
 RUN sudo chmod +x /usr/bin/*
 
