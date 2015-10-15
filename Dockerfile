@@ -10,7 +10,7 @@ RUN echo "deb http://lib.stat.cmu.edu/R/CRAN/bin/linux/ubuntu trusty/" | sudo te
 RUN gpg --keyserver keyserver.ubuntu.com --recv-key 51716619E084DAB9
 
 # install requirements
-#RUN sudo apt-get update -y
+RUN sudo apt-get update -y
 RUN sudo apt-get install jsvc git -y --force-yes
 
 # copy scripts
@@ -20,7 +20,7 @@ RUN sudo chmod +x /usr/bin/*
 
 # Install R Packages
 COPY conf/r-packages.R /usr/bin/r-packages.R
-#RUN sudo R CMD BATCH /usr/bin/r-packages.R
+RUN sudo R CMD BATCH /usr/bin/r-packages.R
 
 # Get Cloudgene [currently as a JAR]
 RUN wget http://cloudgene.uibk.ac.at/downloads/cloudgene-docker/cloudgene-1.11.0-assembly.tar.gz -O /opt/cloudgene.tar.gz
