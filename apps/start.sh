@@ -15,5 +15,4 @@ sudo cp /opt/cloudgene/applications/config/settings.yaml -R /opt/cloudgene/confi
 sudo /usr/bin/start-hadoop.sh
 
 # Start Cloudgene
-sudo chown cloudgene -R /opt/cloudgene
 cd /opt/cloudgene; sudo ./cloudgene -u cloudgene -p 8082 -a start -j /usr/lib/jvm/java-7-oracle -d
