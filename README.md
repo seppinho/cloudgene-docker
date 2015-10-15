@@ -16,5 +16,5 @@ When starting a new Cloudgene Docker container, a repository with apps need to b
 	sudo docker run --privileged -it -p 8082:8082 seppinho/cloudgene-docker --repository https://github.com/seppinho/cloudgene-apps-docker
 	
 ## Start Cloudgene with data persistence
-
+If you want to use your Cloudgene data after a restart, two mountpoints (for the Cloudgene database and  the local files) need to be specified.
 	sudo docker run --privileged -it -p 8082:8082 -v <your-local-mountpoint-1>:/opt/mtdna-server/data/ -v <your-local-mountpoint-2>:/opt/mtdna-server/cloudgene-workspace-local test --repository https://github.com/seppinho/cloudgene-apps-docker.git 
