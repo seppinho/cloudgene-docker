@@ -32,5 +32,5 @@ RUN sudo chown cloudgene -R /opt/cloudgene
 # Make the daemon executable
 RUN sudo chmod +x /opt/cloudgene/cloudgene
 
-ENTRYPOINT ["/usr/bin/start.sh"]
+ENTRYPOINT ["/usr/bin/start-cloudgene.sh"]
 
