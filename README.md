@@ -11,6 +11,10 @@ When starting a new Cloudgene Docker container, a repository with apps need to b
 - mtDNA-Server: A contamination and heteroplasmy pipeline, available also as a [service](http://mtdna-server.uibk.ac.at). 
 - Michigan Imputation Server: Currently only available as a [service](https://imputationserver.sph.umich.edu/), but soon on Docker!
 		
+### Pull Cloudgene	
+
+	docker pull seppinho/cloudgene-docker	
+	
 ### Start Cloudgene
 
 	sudo docker run --privileged -it -p 8082:8082 seppinho/cloudgene-docker --repository https://github.com/seppinho/cloudgene-apps-docker
