@@ -18,7 +18,7 @@ RUN sudo chmod +x /usr/bin/*
 COPY conf/r-packages.R /usr/bin/r-packages.R
 RUN sudo R CMD BATCH /usr/bin/r-packages.R
 
-# Get Cloudgene [currently as a JAR, later from Github]
+# Get Cloudgene [currently as a tar.gz, later from Github]
 ENV CLOUDGENE_VERSION cloudgene-1.11.0
 RUN wget http://cloudgene.uibk.ac.at/downloads/cloudgene-docker/$CLOUDGENE_VERSION-assembly.tar.gz -O /opt/cloudgene.tar.gz
 
