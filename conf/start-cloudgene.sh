@@ -4,8 +4,19 @@ CMD=${1:-"exit 0"}
 if [[ "$CMD" == "--repository" ]];
 then
 	git clone $2 /opt/cloudgene/applications
-else
-	echo "Currently only the --repository flag is implemented!"
+fi
+
+CMD=$3
+if [[ "$CMD" == "--mvn" ]];
+then
+for d in /opt/cloudgene/applications/*;
+ do 
+ if [  -f $d/pom.xml ]
+then
+  echo "File exist."
+ cd $d;mvn install
+fi
+done
 fi
 
 # Connect repository to Cloudgene

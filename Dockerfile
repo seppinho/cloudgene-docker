@@ -8,11 +8,7 @@ RUN gpg --keyserver keyserver.ubuntu.com --recv-key 51716619E084DAB9
 
 # install requirements
 RUN sudo apt-get update -y
-RUN sudo apt-get install jsvc git r-base -y --force-yes
-
-# copy scripts
-ADD conf /usr/bin/
-RUN sudo chmod +x /usr/bin/*
+RUN sudo apt-get install jsvc git r-base  maven -y --force-yes
 
 # Install R Packages
 COPY conf/r-packages.R /usr/bin/r-packages.R
@@ -31,6 +27,11 @@ RUN sudo chown cloudgene -R /opt/cloudgene
 
 # Make the daemon executable
 RUN sudo chmod +x /opt/cloudgene/cloudgene
+
+# copy scripts
+ADD conf /usr/bin/
+RUN sudo chmod +x /usr/bin/*
+
 
 ENTRYPOINT ["/usr/bin/start-cloudgene.sh"]
 
