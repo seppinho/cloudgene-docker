@@ -8,7 +8,7 @@ RUN gpg --keyserver keyserver.ubuntu.com --recv-key 51716619E084DAB9
 
 # install requirements
 RUN sudo apt-get update -y
-RUN sudo apt-get install jsvc git r-base  maven -y --force-yes
+RUN sudo apt-get install jsvc git r-base maven -y --force-yes
 
 # Install R Packages
 COPY conf/r-packages.R /usr/bin/r-packages.R
