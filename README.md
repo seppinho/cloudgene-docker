@@ -1,4 +1,4 @@
-# Cloudgene - A Hadoop Workflow System on Docker 
+# Cloudgene - A Hadoop Workflow System
 
 ### Introduction to Cloudgene
 This repository provides a ready-to-use Docker image for Cloudgene and installs all requirements, especially Apache Hadoop (CDH5).
@@ -11,15 +11,14 @@ When starting a new Cloudgene Docker container, a repository with apps need to b
 - mtDNA-Server: A contamination and heteroplasmy pipeline, available also as a [service](http://mtdna-server.uibk.ac.at). 
 - Michigan Imputation Server: Currently only available as a [service](https://imputationserver.sph.umich.edu/), but soon on Docker!
 		
-### Pull Cloudgene	
+### Pull & Start Cloudgene	
 
 	docker pull seppinho/cloudgene-docker	
 	
-### Start Cloudgene
+### Start Cloudgene with remote repository
 
 	sudo docker run --privileged -it -p 8082:8082 seppinho/cloudgene-docker --repository https://github.com/seppinho/cloudgene-apps-docker
 	
-### Start Cloudgene with data persistence
-If you want to use your Cloudgene data after a restart, two mountpoints (for the Cloudgene database and  the local files) need to be specified.
+### Start Cloudgene with local repository
 
-	sudo docker run --privileged -it -p 8082:8082 -v <your-local-mountpoint-1>:/opt/mtdna-server/data/ -v <your-local-mountpoint-2>:/opt/mtdna-server/cloudgene-workspace-local seppinho/cloudgene-docker --repository https://github.com/seppinho/cloudgene-apps-docker.git 
+	sudo docker run --privileged -it -p 8082:8082 -v <local-app-repository>:/opt/cloudgene/apps/ seppinho/cloudgene-docker
