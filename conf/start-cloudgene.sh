@@ -8,9 +8,6 @@ then
 fi
 
 # Compile
-CMD=$3
-if [[ "$CMD" == "--mvn" ]];
-then
 for d in /opt/cloudgene/applications/*;
  do 
  if [  -f $d/pom.xml ]
@@ -19,7 +16,6 @@ then
  cd $d;mvn clean install -Dmaven.test.skip=true
 fi
 done
-fi
 
 
 # Start Hadoop
