@@ -16,12 +16,14 @@ RUN sudo R CMD BATCH /usr/bin/r-packages.R
 
 # Get Cloudgene [currently as a tar.gz, later from Github]
 ENV CLOUDGENE_VERSION cloudgene-1.15.0
-RUN wget http://cloudgene.uibk.ac.at/downloads/cloudgene-$CLOUDGENE_VERSION-assembly.tar.gz -O /opt/cloudgene.tar.gz
+RUN wget http://cloudgene.uibk.ac.at/downloads/$CLOUDGENE_VERSION-assembly.tar.gz -O /opt/cloudgene.tar.gz
 
 # Create structure and set permissions
 RUN mkdir /opt/cloudgene
 RUN mkdir /opt/cloudgene/applications
 RUN mkdir /opt/cloudgene/apps
+RUN mkdir /opt/cloudgene/tmp
+RUN chmod -R 777 /opt/cloudgene/tmp
 RUN tar xvfz /opt/cloudgene.tar.gz -C /opt/cloudgene
 RUN sudo rm /opt/cloudgene.tar.gz
 RUN sudo chown cloudgene -R /opt/cloudgene
