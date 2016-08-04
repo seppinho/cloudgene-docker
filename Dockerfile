@@ -15,8 +15,8 @@ COPY conf/r-packages.R /usr/bin/r-packages.R
 RUN sudo R CMD BATCH /usr/bin/r-packages.R
 
 # Get Cloudgene [currently as a tar.gz, later from Github]
-ENV CLOUDGENE_VERSION cloudgene-1.13.0
-RUN wget https://dbis-owncloud.uibk.ac.at/index.php/s/EdSsqRnSVZr6X8l/download -O /opt/cloudgene.tar.gz
+ENV CLOUDGENE_VERSION cloudgene-1.15.0
+RUN wget http://cloudgene.uibk.ac.at/downloads/cloudgene-$CLOUDGENE_VERSION-assembly.tar.gz -O /opt/cloudgene.tar.gz
 
 # Create structure and set permissions
 RUN mkdir /opt/cloudgene
