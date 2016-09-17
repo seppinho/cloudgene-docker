@@ -4,8 +4,8 @@ MAINTAINER Cloudgene-Team: Sebastian Schoenherr <sebastian.schoenherr@i-med.ac.a
 
 #Install Prerequistes
 RUN echo "deb http://lib.stat.cmu.edu/R/CRAN/bin/linux/ubuntu trusty/" | sudo tee -a /etc/apt/sources.list
-RUN gpg --keyserver keyserver.ubuntu.com --recv-key 51716619E084DAB9
-
+#RUN gpg --keyserver keyserver.ubuntu.com --recv-key 51716619E084DAB9
+RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 # install requirements
 RUN sudo apt-get update -y
 RUN sudo apt-get install r-base -y --force-yes
@@ -15,8 +15,8 @@ COPY conf/r-packages.R /usr/bin/r-packages.R
 RUN sudo R CMD BATCH /usr/bin/r-packages.R
 
 # Get Cloudgene [currently as a tar.gz, later from Github]
-ENV CLOUDGENE_VERSION cloudgene-1.17.0
-RUN wget http://cloudgene.uibk.ac.at/downloads/$CLOUDGENE_VERSION-assembly.tar.gz -O /opt/cloudgene.tar.gz
+ENV CLOUDGENE_VERSION cloudgene-1.18.0
+RUN wget https://imputationserver.sph.umich.edu/static/downloads/$CLOUDGENE_VERSION-assembly.tar.gz -O /opt/cloudgene.tar.gz
 
 # Create structure and set permissions
 RUN mkdir /opt/cloudgene
