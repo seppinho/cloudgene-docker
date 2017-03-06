@@ -36,5 +36,5 @@ ADD conf /usr/bin/
 RUN sudo chmod +x /usr/bin/*
 
 
-ENTRYPOINT ["/usr/bin/start-cloudgene.sh"]
+#ENTRYPOINT ["/usr/bin/start-cloudgene.sh"]
 
