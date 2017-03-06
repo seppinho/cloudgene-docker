@@ -38,4 +38,3 @@ echo ""
 echo "Michigan Imputation Server on Docker is ready!"
 echo "To start your imputation jobs open the following URL in your browser: http://localhost:8082 or http://<your-ipadress>:8082"
 # End with bash
-/bin/bash
