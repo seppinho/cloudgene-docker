@@ -15,7 +15,7 @@ RUN sudo R CMD BATCH /usr/bin/r-packages.R
 
 # Get Cloudgene [currently as a tar.gz, later from Github]
 
-ENV CLOUDGENE_VERSION cloudgene-1.20.0
+ENV CLOUDGENE_VERSION cloudgene-1.22.0
 RUN wget https://imputationserver.sph.umich.edu/static/downloads/$CLOUDGENE_VERSION-assembly.tar.gz -O /opt/cloudgene.tar.gz
 
 # Create structure and set permissions
