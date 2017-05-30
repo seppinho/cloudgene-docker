@@ -35,8 +35,8 @@ done
 cd /opt/cloudgene; sudo ./cloudgene -u cloudgene -p 8082 -a start -j /usr/lib/jvm/java-8-oracle
 
 echo ""
-echo "Michigan Imputation Server on Docker is ready!"
-echo "To start your imputation jobs open the following URL in your browser: http://localhost:8082 or http://<your-ipadress>:8082"
+echo "Setup done."
+echo "To start your jobs open the following URL in your browser: http://localhost:8082 or http://<your-ipadress>:8082"
 
 # End with bash
 /bin/bash
