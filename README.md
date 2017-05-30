@@ -17,8 +17,8 @@ When starting a new Cloudgene Docker container, a repository with apps need to b
 	
 ### Start Cloudgene with remote repository
 
-	sudo docker run --privileged -it -p 8082:8082 -p 50030:50030 -p 50060:50060  seppinho/cloudgene-docker --repository https://github.com/seppinho/cloudgene-apps-docker
+	sudo docker run --privileged -it -p 8082:8082 -p 50030:50030 -p 50060:50060  seppinho/cloudgene-docker start-cloudgene.sh --repository https://github.com/seppinho/cloudgene-apps-docker
 	
 ### Start Cloudgene with local repository
 
-	sudo docker run --privileged -it -p 8082:8082 -p 50030:50030 -p 50060:50060 -v <local-app-repository>:/opt/cloudgene/apps/ seppinho/cloudgene-docker
+	sudo docker run --privileged -it -p 8082:8082 -p 50030:50030 -p 50060:50060 -v <local-app-repository>:/opt/cloudgene/apps/ seppinho/cloudgene-docker start-cloudgene.sh
