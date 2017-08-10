@@ -1,4 +1,4 @@
-# Cloudgene - A Hadoop Workflow System
+## Cloudgene - A Hadoop Workflow System
 
 ### Introduction to Cloudgene
 This repository provides a ready-to-use Docker image for Cloudgene and installs all requirements, especially Apache Hadoop (CDH5).
